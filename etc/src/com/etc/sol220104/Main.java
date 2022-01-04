@@ -14,7 +14,7 @@ public class Main {
                 schedule[i][j] = schedule[i][j].replace(":","");
             }
         }
-        okPermu(new int[4], 0);
+        okPermu(new int[5], 0);
 
         System.out.println(ans);
     }
@@ -26,7 +26,7 @@ public class Main {
             }
             return;
         }
-        for (int i = 1; i <= 4; i++) {
+        for (int i = 0; i < 4; i++) {
             arr[idx] = i;
             okPermu(arr, idx + 1);
         }
@@ -37,8 +37,8 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             String str = schedule[i][arr[i]];
             if(str.length()>10){
-                String str1 = str.substring(0,8);
-                String str2 = str.substring(9,16);
+                String str1 = str.substring(0,7);
+                String str2 = str.substring(8,15);
                 for (int j = 0; j < 3; j++) {
                     if (set.contains(str1))
                         return false;
@@ -63,8 +63,12 @@ public class Main {
 
     private static String setting(String str) {
         StringBuilder sb = new StringBuilder(str.substring(0,3));
-        int time = Integer.parseInt(str.substring(3,7));
-        sb.append(time+30);
+        String tmp = str.substring(3,7);
+        int time = Integer.parseInt(tmp);
+        time += time%100==0?30:100;
+        if(time<1000)
+            sb.append(0);
+        sb.append(time);
         return sb.toString();
     }
 }
