@@ -1,4 +1,4 @@
-package com.etc.sol220106;
+package com.etc.sol220106.test2;
 
 public class Main {
     static int k = 1;
