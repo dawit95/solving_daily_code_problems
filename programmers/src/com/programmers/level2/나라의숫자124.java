@@ -19,7 +19,7 @@ public class 나라의숫자124 {
             }
             current /= 3;
         }
-        sb = sb.reverse();
+        sb.reverse();
         boolean flag = true;
         while (flag) {
             for (int i = 0; i < sb.length(); i++) {
@@ -46,12 +46,12 @@ public class 나라의숫자124 {
     }
     public String amazingSolution(int n){
         String[] num = {"4","1","2"};
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
 
         while(n > 0){
-            answer = num[n % 3] + answer;
+            answer.insert(0, num[n % 3]);
             n = (n - 1) / 3;
         }
-        return answer;
+        return answer.toString();
     }
 }
