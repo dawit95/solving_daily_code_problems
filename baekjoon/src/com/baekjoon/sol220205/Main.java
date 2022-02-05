@@ -15,12 +15,13 @@ public class Main {
             while (idxS!=s.length() && idxT!=t.length()){
                 if(s.charAt(idxS)==t.charAt(idxT)){
                     idxS++;
-                    idxT++;
-                }else{
-
                 }
+                idxT++;
             }
-
+            String ans ="No";
+            if(s.length()==idxS)
+                ans = "Yes";
+            System.out.println(ans);
         }
     }
 }
