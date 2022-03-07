@@ -16,20 +16,20 @@ public class Main {
         //입력
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < 2 * i + 1; j++) {
-                // r = i , c = j+(len/2 - i)
-                int r = i;
+                // row = i , c = j+(len/2 - i)
+                int row = i;
                 int c = j + (len / 2 - i);
-                map[r][c] = grid[i].charAt(j)=='B'?1:2;
+                map[row][c] = grid[i].charAt(j)=='B'?1:2;
             }
         }
         // 모든 edge 탐색
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < 2 * i + 1; j++) {
-                // r = i , c = j+(len/2 - i)
-                int r = i;
+                // row = i , c = j+(len/2 - i)
+                int row = i;
                 int c = j + (len / 2 - i);
                 if(j==0||j==2*i||(i==grid.length-1&&c%2==1)){
-                    find(-1,1,r,c);
+                    find(-1,1,row,c);
                 }
             }
         }
