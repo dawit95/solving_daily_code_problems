@@ -10,10 +10,14 @@ public class Main {
 //        System.out.println(Arrays.toString(sol.solution(24, 24)));
 //        나라의숫자124 sol = new 나라의숫자124();
 
-        조이스틱 sol = new 조이스틱();
-//        String str = "JAN";
-        String str = "BBAAB";
-        System.out.println(sol.solution(str));
+//        조이스틱 sol = new 조이스틱();
+////        String str = "JAN";
+//        String str = "BBAAB";
+//        System.out.println(sol.solution(str));
+
+        큰수만들기 sol = new 큰수만들기();
+        System.out.println(sol.solution1("11",1));
+        System.out.println(sol.solution1("4177252841",4));
     }
 
 
