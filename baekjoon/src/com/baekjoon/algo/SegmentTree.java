@@ -4,7 +4,7 @@ package com.baekjoon.algo;
  * FileName : SegmentTree
  * Author : David
  * Date : 2022-04-05
- * Description :
+ * Description : algo ( https://www.acmicpc.net/blog/view/9 )
  */
 public class SegmentTree {
     static class Stree {
