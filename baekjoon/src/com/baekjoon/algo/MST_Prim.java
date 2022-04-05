@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * Date : 2022-03-23
  * Description :
  */
-public class Prim {
+public class MST_Prim {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

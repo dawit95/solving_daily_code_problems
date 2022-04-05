@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * Date : 2022-03-23
  * Description :
  */
-public class Kruskal {
+public class MST_Kruskal {
 
     static class Edge implements Comparable<Edge>{
         int from,to,weight;
@@ -33,7 +33,7 @@ public class Kruskal {
     }
 
     static int V,E;
-    static int parents[];
+    static int[] parents;
     static Edge[] edgeList;
 
     static void make() { // 크기가 1인 단위 집합을 만든다.
@@ -76,7 +76,7 @@ public class Kruskal {
             st = new StringTokenizer(br.readLine().trim(), " ");
             int from = Integer.parseInt(st.nextToken());
             int to = Integer.parseInt(st.nextToken());
-            int weight = Integer.parseInt(st.nextToken());;
+            int weight = Integer.parseInt(st.nextToken());
             edgeList[i] = new Edge(from, to, weight);
         }//간선리스트
 
