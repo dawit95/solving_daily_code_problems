@@ -9,7 +9,7 @@ package com.etc.sol220413.test2;
 public class Main {
     public static void main(String[] args) {
 
-        String str = "1231231231231321321321321231239";
+        String str = "111";
         System.out.println(str);
         System.out.println(solution(str));
     }
@@ -17,8 +17,8 @@ public class Main {
     public static String solution(String S) {
         char[] charArr = S.trim().toCharArray();
         int[] number = new int[10];
-        for (int i = 0, len = charArr.length; i < len; i++) {
-            number[charArr[i] - '0']++;
+        for (char c : charArr) {
+            number[c - '0']++;
         }
         StringBuilder front = new StringBuilder();
         StringBuilder end = new StringBuilder();
@@ -43,11 +43,11 @@ public class Main {
         }
         for (int i = 9; i >= 0; i--) {
             if (number[i] > 0) {
-                front.append(i+"");
+                front.append(i);
                 break;
             }
         }
-        front.append(end.toString());
+        front.append(end);
         return front.toString();
     }
 }

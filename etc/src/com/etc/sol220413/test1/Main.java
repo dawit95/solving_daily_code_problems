@@ -10,12 +10,12 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        String a = "9999999998";
-        long tmpl = Long.parseLong(a);
-        int tmpi = Integer.parseInt(a);
-        System.out.println(tmpi);
+        String a = "99899998";
+//        long tmpl = Long.parseLong(a);
+        int tmpInt = Integer.parseInt(a);
+        System.out.println(solution(tmpInt));
     }
-    public int solution(int N) {
+    public static int solution(int N) {
         String str = N+"";
         char[] charArr = str.trim().toCharArray();
         Arrays.sort(charArr);
@@ -25,7 +25,6 @@ public class Main {
         }
         long check = Long.parseLong(sb.toString());
         check = check>100000000?-1:check;
-        int ans = (int) check;
-        return ans;
+        return (int) check;
     }
 }
